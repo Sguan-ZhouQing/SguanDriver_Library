@@ -1,2 +1,2 @@
 # SguanDriver_Library
-This library is mainly used for implementing drivers for many common modules in C language code. It is purely logic-based and supports development on various MCUs.
+该库主要用于在C语言代码中实现许多常见模块的驱动程序。它完全基于逻辑，并支持在各种微控制器上开发。
