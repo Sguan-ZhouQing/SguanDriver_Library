@@ -10,7 +10,7 @@
 #define SDA_Pin		GPIO_PIN_11
 #define SCL_Pin		GPIO_PIN_12
 
-// 单片机的函数调用重写（GPIOkai'l）:
+// 单片机的函数调用重写（GPIO开漏输出）:
 void GPIO_SDA_SetBits(uint8_t BitValue){
     // GPIO输出高低电平
     HAL_GPIO_WritePin(SDA_Port, SDA_Pin, (GPIO_PinState)BitValue);

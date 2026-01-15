@@ -16,8 +16,6 @@
   * 发送邮件之前，你可以先到更新动态页面查看最新程序，如果此问题已经修改，则无需再发邮件
   ***************************************************************************************
   */
-
-#include "gpio.h"
 #include "OLED.h"
 #include <string.h>
 #include <math.h>
@@ -96,7 +94,7 @@ uint8_t OLED_DisplayBuf[8][128];
 void OLED_W_SCL(uint8_t BitValue)
 {
 	/*根据BitValue的值，将SCL置高电平或者低电平*/
-	HAL_GPIO_WritePin(GPIOB,GPIO_PIN_8,(GPIO_PinState)BitValue);
+	GPIO_SDA_SetBits(BitValue);
 	/*如果单片机速度过快，可在此添加适量延时，以避免超出I2C通信的最大速度*/
 	//...
 }
@@ -112,7 +110,7 @@ void OLED_W_SCL(uint8_t BitValue)
 void OLED_W_SDA(uint8_t BitValue)
 {
 	/*根据BitValue的值，将SDA置高电平或者低电平*/
-	HAL_GPIO_WritePin(GPIOB,GPIO_PIN_9,(GPIO_PinState)BitValue);
+	GPIO_SCL_SetBits(BitValue);
 	
 	/*如果单片机速度过快，可在此添加适量延时，以避免超出I2C通信的最大速度*/
 	//...
@@ -136,10 +134,6 @@ void OLED_GPIO_Init(void)
 	{
 		for (j = 0; j < 1000; j ++);
 	}
-	
-	/*将SCL和SDA引脚初始化为开漏模式*/
-	MX_GPIO_Init();
-	
 	/*释放SCL和SDA*/
 	OLED_W_SCL(1);
 	OLED_W_SDA(1);

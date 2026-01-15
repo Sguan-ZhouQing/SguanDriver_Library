@@ -10,18 +10,14 @@ void I2C_SendData(uint8_t ADDRESS, uint8_t *cmd_data, uint8_t num){
 }
 
 /* 核心函数使用方法示例
-#include "nRF_Printf.h"
-#include "nRF24L01.h"
+#include "OLED.h"
 
 int main(){
-    NRF24L01_Init();
+    OLED_Init();
     while (1){
-        nRF_Printf("Hello World!");
+        OLED_ShowString(0,0,"Hello World!",OLED_OLED_8X16);
+        OLED_Update();
     }
-}
-
-void TIM_IRQHandler(void){
-    nRF_Tick();
 }
 */
 #endif // USERSET_H
