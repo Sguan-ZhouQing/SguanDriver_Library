@@ -3,6 +3,7 @@
 
 #include <stdint.h>
 #include "OLED_Data.h"
+#include "UserSet.h"
 
 /*参数宏定义*********************/
 

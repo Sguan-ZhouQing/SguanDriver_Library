@@ -1,7 +1,7 @@
 #ifndef __NRF24L01_H
 #define __NRF24L01_H
 
-#include "stm32f1xx_hal.h"
+#include "UserSet.h"
 #include "nRF24L01_Config.h"
 
 #define TX_ADR_WIDTH    5     //5字节地址宽度

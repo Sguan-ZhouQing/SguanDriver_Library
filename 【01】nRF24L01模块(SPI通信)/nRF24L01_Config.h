@@ -1,22 +1,6 @@
 #ifndef __NRF24L01_CONFIG_H
 #define __NRF24L01_CONFIG_H
 
-
-/**********  NRF24L01引脚定义  ***********/
-#define IRQ_Port	GPIOA
-#define CE_Port		GPIOB
-#define CSN_Port	GPIOB
-#define SCK_Port	GPIOB
-#define MOSI_Port	GPIOB
-#define MISO_Port	GPIOB
-
-#define IRQ_Pin		GPIO_PIN_8
-#define CE_Pin		GPIO_PIN_11
-#define CSN_Pin		GPIO_PIN_12
-#define SCK_Pin		GPIO_PIN_13
-#define MOSI_Pin	GPIO_PIN_15
-#define MISO_Pin	GPIO_PIN_14
-
 /**********  NRF24L01寄存器操作命令  ***********/
 #define nRF_READ_REG        0x00 
 #define nRF_WRITE_REG       0x20 
