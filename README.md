@@ -4,10 +4,6 @@
 
 **SguanDriver_Library** 是一个模块化、硬件无关的驱动程序库，专为 C 语言微控制器开发而设计。该库提供了一个综合的驱动程序集合，为常见的电子模块提供了结构良好、易于移植的实现方案。
 
-**作者**: 星必尘Sguan  
-**邮箱**: 3464647102@qq.com  
-**开源协议**: MIT License
-
 ## 核心特性
 
 ### 🏗️ 硬件抽象层 (HAL) 架构
@@ -66,13 +62,14 @@
 ### 代码示例
 ```c
 // 在您的应用程序中
-#include "OLED/oled_driver.h"
+#include "OLED.h"
 
 // 初始化显示
 OLED_Init();
 
 // 显示文本
-OLED_ShowString(0, 0, "Hello, World!");
+OLED_ShowString(0, 0, "Hello, World!", OLED_8x16);
+OLED_Update();
 ```
 
 ## 移植指南
